@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Contact() {
+function Contact({theme}) {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState(null); // null | "success" | "error"
@@ -34,12 +34,12 @@ function Contact() {
   }
 
   return (
-    <section id="contact" className=" py-20">
+    <section id="contact" className={theme?"bg-[#0f1720] py-20":" py-20"}>
       <div className="container mx-auto px-6 lg:px-20 grid lg:grid-cols-2 gap-12">
 
         {/* Contact Form */}
-        <form onSubmit={handleSubmit} className=" p-8 rounded-xl shadow-lg">
-          <h2 className="text-2xl font-semibold  mb-6">Send Me a Message</h2>
+        <form onSubmit={handleSubmit} className={theme?" p-8 rounded-xl shadow-lg ring-6 ring-gray-500":" p-8 rounded-xl shadow-lg"}>
+          <h2 className={theme?"text-2xl font-semibold text-white mb-6":"text-2xl font-semibold  mb-6"}>Send Me a Message</h2>
 
           <input
             type="text"
@@ -47,7 +47,7 @@ function Contact() {
             placeholder="Name"
             value={form.name}
             onChange={handleChange}
-            className="w-full mb-4 px-4 py-3 rounded-lg bg-amber-50  placeholder-gray-800 focus:outline-none"
+            className={theme?"w-full mb-4 px-4 py-3 rounded-lg bg-white  placeholder-gray-800 focus:outline-none":"w-full mb-4 px-4 py-3 rounded-lg bg-amber-50  placeholder-gray-800 focus:outline-none"}
           />
           {errors.name && <p className="text-sm text-red-400 mb-2">{errors.name}</p>}
 
@@ -57,7 +57,7 @@ function Contact() {
             placeholder="Email"
             value={form.email}
             onChange={handleChange}
-            className="w-full mb-4 px-4 py-3 rounded-lg  bg-amber-50  placeholder-gray-800 focus:outline-none"
+            className={theme?" bg-white w-full mb-4 px-4 py-3 rounded-lg    placeholder-gray-800 focus:outline-none":"w-full mb-4 px-4 py-3 rounded-lg  bg-amber-50  placeholder-gray-800 focus:outline-none"}
           />
           {errors.email && <p className="text-sm text-red-400 mb-2">{errors.email}</p>}
 
@@ -67,7 +67,7 @@ function Contact() {
             placeholder="Subject"
             value={form.subject}
             onChange={handleChange}
-            className="w-full mb-4 px-4 py-3 rounded-lg  bg-amber-50  placeholder-gray-800 focus:outline-none"
+            className={theme?" bg-white w-full mb-4 px-4 py-3 rounded-lg   placeholder-gray-800 focus:outline-none":"w-full mb-4 px-4 py-3 rounded-lg  bg-amber-50  placeholder-gray-800 focus:outline-none"}
           />
           {errors.subject && <p className="text-sm text-red-400 mb-2">{errors.subject}</p>}
 
@@ -77,7 +77,7 @@ function Contact() {
             value={form.message}
             onChange={handleChange}
             rows="5"
-            className="w-full mb-4 px-4 py-3 rounded-lg  bg-amber-50  placeholder-gray-800 focus:outline-none"
+            className={theme?"w-full mb-4 px-4 py-3 rounded-lg  bg-white  placeholder-gray-800 focus:outline-none":"w-full mb-4 px-4 py-3 rounded-lg  bg-amber-50  placeholder-gray-800 focus:outline-none"}
           />
           {errors.message && <p className="text-sm text-red-400 mb-2">{errors.message}</p>}
 
@@ -99,8 +99,8 @@ function Contact() {
         {/* Contact / Social Column */}
         <div className="max-w-md flex flex-col justify-between">
           <div>
-            <h3 className="text-xl font-semibold  mb-4">Connect With Me</h3>
-            <p className="text-gray-800 mb-6">You can also reach me on these platforms or send an email directly.</p>
+            <h3 className={theme?"text-2xl font-bold text-white mb-4":"text-2xl font-bold  mb-4"}>Connect With Me</h3>
+            <p className={theme?"text-gray-300 mb-6":"text-gray-800 mb-6"}>You can also reach me on these platforms or send an email directly.</p>
 
             <div className="flex gap-6 mb-8">
               {/* LinkedIn */}
@@ -138,9 +138,9 @@ function Contact() {
           </div>
 
           <div className=" p-6 rounded-xl">
-            <p className="text-gray-800">Prefer direct contact?</p>
-            <p className=" font-medium mt-2">you@example.com</p>
-            <p className="text-gray-800 mt-1">+91 98765 43210</p>
+            <p className={theme?"text-gray-300":"text-gray-800"}>Prefer direct contact?</p>
+            <p className={theme?"font-medium mt-2 text-gray-300":"font-medium mt-2"}>you@example.com</p>
+            <p className={theme?"text-gray-300 mt-1":"text-gray-800 mt-1"}>+91 98765 43210</p>
           </div>
         </div>
 

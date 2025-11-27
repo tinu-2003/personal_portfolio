@@ -1,10 +1,10 @@
 import React from 'react'
 
-function About() {
+function About({theme}) {
   return (
     <>
     {/* bg-[#0f1720] */}
- <section id='about' className="min-h-screen  flex items-center py-20">
+ <section id='about' className={theme?"min-h-screen bg-[#0f1720] flex items-center py-20":"min-h-screen  flex items-center py-20"}>
 <div className="container mx-auto px-6 lg:px-20">
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 {/* Left: Image */}
@@ -19,16 +19,16 @@ className="rounded-2xl w-full max-w-md shadow-2xl object-cover"
 
 {/* Right: Text Content */}
 <div>
-<h2 className="text-5xl font-extrabold  mb-4">About Me</h2>
+<h2 className={theme?"text-5xl font-extrabold text-white  mb-4":"text-5xl font-extrabold  mb-4"}>About Me</h2>
 
 
-<p className="text-lg text-blue-800 mb-6">
+<p className={theme?"text-lg text-blue-800 mb-6":"text-lg text-blue-800 mb-6"}>
 A passionate front-end developer dedicated to building intuitive and engaging user
 interfaces.
 </p>
 
 
-<p className="text-gray-800 leading-relaxed text-[17px]">
+<p className={theme?"text-gray-300 leading-relaxed text-[17px]":"text-gray-800 leading-relaxed text-[17px]"}>
 Hello! I'm a front-end developer with a passion for creating clean, modern, and
 user-friendly web experiences. My journey into the world of code began with a
 fascination for how beautiful design and powerful technology can come together to solve
@@ -44,7 +44,7 @@ craft.
 href="#resume"
 className="px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-lg hover:bg-blue-700 transition inline-block"
 >
-View My Resume
+ Resume
 </a>
 </div>
 </div>

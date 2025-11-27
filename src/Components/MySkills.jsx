@@ -1,6 +1,6 @@
 import React from 'react'
 
-function MySkills() {
+function MySkills({theme}) {
 
     const skills = [
 { name: "JavaScript", icon: "" },
@@ -17,8 +17,8 @@ function MySkills() {
   return (
     <>
     {/* bg-[#0f1720]     */}
-    <section className=" py-24">
-<h2 className="text-5xl font-extrabold  text-center mb-16">
+    <section className={theme?" bg-[#0f1720]   py-24":" py-24"}>
+<h2 className={theme?"text-5xl font-extrabold  text-center mb-16 text-white":"text-5xl font-extrabold  text-center mb-16"}>
 My Tech Stack
 </h2>
 
@@ -27,10 +27,10 @@ My Tech Stack
 {skills.map((skill, index) => (
 <div
 key={index}
-className=" rounded-2xl py-10 flex flex-col items-center shadow-xl hover:scale-105 transition duration-300"
+className={theme?" bg-gray-800 rounded-2xl py-10 flex flex-col items-center shadow-xl hover:scale-105 transition duration-300" :" rounded-2xl py-10 flex flex-col items-center shadow-xl hover:scale-105 transition duration-300"}
 >
-<img src={skill.icon} alt={skill.name} className="w-16 h-16 object-contain mb-4" />
-<p className=" text-lg font-medium">{skill.name}</p>
+<img src={skill.icon} alt={skill.name} className={theme?"w-16 h-16 text-white object-contain mb-4":"w-16 h-16 object-contain mb-4"} />
+<p className={theme?" text-white text-lg font-medium":" text-lg font-medium"}>{skill.name}</p>
 </div>
 ))}
 </div>

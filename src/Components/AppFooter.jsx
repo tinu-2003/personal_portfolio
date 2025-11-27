@@ -1,21 +1,20 @@
 import React from 'react'
 
-function AppFooter() {
+function AppFooter({theme}) {
     const year = new Date().getFullYear();
   return (
     <>
-    <footer className="pt-12 pb-6 border-t border-gray-300 text-center">
+    <footer className={theme?"pt-12 pb-6  bg-[#0f1720]  text-center":"pt-12 pb-6 border-t border-gray-300 text-center"}>
 {/* Navigation */}
 <nav className="flex justify-center gap-10 text-gray-800 text-lg mb-8">
-<a href="#about" className="hover:text-blue-600 transition">About</a>
-<a href="#projects" className="hover:text-blue-600 transition">Projects</a>
-<a href="#contact" className="hover:text-blue-600 transition">Contact</a>
-<a href="#resume" className="hover:text-blue-600 transition">Resume</a>
+<a href="#about" className={theme?"hover:text-blue-600 transition text-white":"hover:text-blue-600 transition"}>About</a>
+<a href="#projects" className={theme?"hover:text-blue-600 transition text-white":"hover:text-blue-600 transition"}>Projects</a>
+<a href="#contact" className={theme?"hover:text-blue-600 transition text-white":"hover:text-blue-600 transition"}>Contact</a>
+<a href="#resume" className={theme?"hover:text-blue-600 transition text-white":"hover:text-blue-600 transition"}>Resume</a>
 </nav>
 
-
 {/* Icons */}
-<div className="flex justify-center gap-10 text-gray-800 text-3xl mb-6">
+<div className={theme?"flex justify-center gap-10 text-gray-300 text-3xl mb-6":"flex justify-center gap-10 text-gray-800 text-3xl mb-6"}>
 {/* User Icon */}
 <a href="#" aria-label="Profile" className="hover:text-blue-600 transition">
 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +53,7 @@ fill="currentColor"
 
 
 {/* Copyright */}
-<p className="text-gray-800 text-sm">© {year} Tinu Sunny. All rights reserved.</p>
+<p className={theme?"text-gray-300 text-sm":"text-gray-800 text-sm"}>© {year} John Babu. All rights reserved.</p>
 </footer>
     </>
   )
