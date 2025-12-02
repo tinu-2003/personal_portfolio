@@ -31,9 +31,9 @@ function AdminHomePage() {
          {/* PROFILE PIC */}
       <div className="text-center mb-6">
         <img
-          src={"https://via.placeholder.com/120"}
+          src={"https://img.freepik.com/free-photo/businessman-curly-haired-young-businessman-blue-shirt_259150-58623.jpg?semt=ais_hybrid&w=740&q=80"}
           alt="Profile"
-          className="w-32 h-32 rounded-full mx-auto object-cover border mb-3"
+          className="w-32 h-32 rounded-full mx-auto object-cover  border mb-3"
         />
 
         <div className="flex flex-col items-center">
@@ -56,8 +56,7 @@ function AdminHomePage() {
             id="name"
             name="name"
             placeholder="John Doe"
-            value={""}
-            onChange={""}
+       
           />
         </div>
 
@@ -68,8 +67,7 @@ function AdminHomePage() {
             id="title"
             name="title"
             placeholder="Frontend Developer"
-            value={""}
-            onChange={""}
+          
           />
         </div>
 
@@ -80,23 +78,12 @@ function AdminHomePage() {
             id="bio"
             name="bio"
             placeholder="Passionate developer specializing in React."
-            value={""}
-            onChange={''}
+        
           />
         </div>
       </div>
 
-      {/* LIVE PREVIEW
-      <div className="mt-10 p-4 bg-gray-50 rounded-lg shadow-inner">
-        <h2 className="text-lg font-semibold mb-3">Live Preview</h2>
-        <div className="text-center">
-          <h1 className="text-2xl font-bold">{ "Your Name"}</h1>
-          <p className="text-gray-600">{ "Your Title"}</p>
-          <p className="mt-2 text-gray-700">
-            { "A short one-line bio goes here."}
-          </p>
-        </div>
-      </div> */}
+    
 
       <hr className="my-6" />
 

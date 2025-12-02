@@ -11,9 +11,11 @@ function AdminSideBar() {
           {/* <SidebarItem className='mb-6 mt-4' href="#" icon={HiChartPie}>
             Dashboard
           </SidebarItem> */}
-           <SidebarItem className='mb-6' href="#" icon={HiUser}>
-          Profile
-          </SidebarItem>
+         <Link to={'/adminhomepage'}>
+             <SidebarItem className='mb-6' href="#" icon={HiUser}>
+            Profile
+            </SidebarItem>
+         </Link >
         <Link to={'/adminprojectadd'}>
               <SidebarItem className='mb-6' href="#" icon={HiViewBoards}  >
                 Projects

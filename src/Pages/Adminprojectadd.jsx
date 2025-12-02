@@ -1,19 +1,16 @@
 import { useState } from "react";
 import { Label, TextInput, Select, Textarea, FileInput, Button } from "flowbite-react";
 import AdminSideBar from "../Components/AdminSideBar";
+import { addprojectsAPI } from "../services/allAPIs";
 
 function Adminprojectadd() {
      const [formData, setFormData] = useState({
     projectName: "",
     projectDescription: "",
-    clientName: "",
     projectStatus: "",
-    startDate: "",
-    endDate: "",
-    budget: "",
-    teamMembers: "",
     projectType: "",
     attachments: null,
+    skills:[]
   });
 
   const handleChange = (e) => {
@@ -24,24 +21,55 @@ function Adminprojectadd() {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Project Form Data:", formData);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("Project Form Data:", formData);
+  // };
 
-   const [tag, setTag] = useState("");
-  const [tags, setTags] = useState([]);
+  const [tag, setTag] = useState("");
+const [tags, setTags] = useState([]);
 
-  const addTag = () => {
-    if (tag.trim() !== "") {
-      setTags([...tags, tag.trim()]);
-      setTag("");
-    }
-  };
+// Add a tag
+const addTag = () => {
+  if (tag.trim() !== "") {
+    const newTag = tag.trim();
 
-  const removeTag = (removeIndex) => {
-    setTags(tags.filter((_, index) => index !== removeIndex));
-  };
+    // Update tags for UI
+    setTags(prev => [...prev, newTag]);
+
+    // Update skills in formData
+    setFormData(data => ({
+      ...data,
+      skills: [...data.skills, newTag]
+    }));
+
+    setTag(""); // clear input
+  }
+};
+
+// Remove a tag
+const removeTag = (removeIndex) => {
+  setTags(prev => prev.filter((_, i) => i !== removeIndex));
+
+  setFormData(data => ({
+    ...data,
+    skills: data.skills.filter((_, i) => i !== removeIndex)
+  }));
+};
+
+// console.log( tags);
+// console.log( formData);
+
+// Add data 
+
+const Addproject = async () => {
+  try {
+    const response = await addprojectsAPI(formData); 
+    console.log(response);
+  } catch (error) {
+    console.error("Error adding project:", error);
+  }
+};
   return (
     <>
 
@@ -51,7 +79,7 @@ function Adminprojectadd() {
           <div className="w-full p-6 bg-white shadow-lg rounded-lg mt-3 ml-15" >
           <h2 className="text-2xl font-bold text-gray-800 mb-6">Project Details Form</h2>
     
-          <form onSubmit={handleSubmit} className="space-y-5">
+          <form onSubmit={Addproject} className="space-y-5">
     
             {/* Project Name */}
             <div>
@@ -165,7 +193,7 @@ function Adminprojectadd() {
             </div>
     
             {/* Submit Button */}
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full" >
               Submit Project Details
             </Button>
     

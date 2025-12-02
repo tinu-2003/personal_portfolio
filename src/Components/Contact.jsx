@@ -47,7 +47,7 @@ function Contact({theme}) {
             placeholder="Name"
             value={form.name}
             onChange={handleChange}
-            className={theme?"w-full mb-4 px-4 py-3 rounded-lg bg-white  placeholder-gray-800 focus:outline-none":"w-full mb-4 px-4 py-3 rounded-lg bg-amber-50  placeholder-gray-800 focus:outline-none"}
+            className={theme?"w-full mb-4 px-4 py-3 rounded-lg bg-white  placeholder-gray-800 focus:outline-none":"w-full mb-4 px-4 py-3 rounded-lg border  placeholder-gray-800 focus:outline-none"}
           />
           {errors.name && <p className="text-sm text-red-400 mb-2">{errors.name}</p>}
 
@@ -57,7 +57,7 @@ function Contact({theme}) {
             placeholder="Email"
             value={form.email}
             onChange={handleChange}
-            className={theme?" bg-white w-full mb-4 px-4 py-3 rounded-lg    placeholder-gray-800 focus:outline-none":"w-full mb-4 px-4 py-3 rounded-lg  bg-amber-50  placeholder-gray-800 focus:outline-none"}
+            className={theme?" bg-white w-full mb-4 px-4 py-3 rounded-lg    placeholder-gray-800 focus:outline-none":"w-full mb-4 px-4 py-3 rounded-lg   border placeholder-gray-800 focus:outline-none"}
           />
           {errors.email && <p className="text-sm text-red-400 mb-2">{errors.email}</p>}
 
@@ -67,7 +67,7 @@ function Contact({theme}) {
             placeholder="Subject"
             value={form.subject}
             onChange={handleChange}
-            className={theme?" bg-white w-full mb-4 px-4 py-3 rounded-lg   placeholder-gray-800 focus:outline-none":"w-full mb-4 px-4 py-3 rounded-lg  bg-amber-50  placeholder-gray-800 focus:outline-none"}
+            className={theme?" bg-white w-full mb-4 px-4 py-3 rounded-lg   placeholder-gray-800 focus:outline-none":"w-full mb-4 px-4 py-3 rounded-lg border placeholder-gray-800 focus:outline-none"}
           />
           {errors.subject && <p className="text-sm text-red-400 mb-2">{errors.subject}</p>}
 
@@ -77,7 +77,7 @@ function Contact({theme}) {
             value={form.message}
             onChange={handleChange}
             rows="5"
-            className={theme?"w-full mb-4 px-4 py-3 rounded-lg  bg-white  placeholder-gray-800 focus:outline-none":"w-full mb-4 px-4 py-3 rounded-lg  bg-amber-50  placeholder-gray-800 focus:outline-none"}
+            className={theme?"w-full mb-4 px-4 py-3 rounded-lg  bg-white  placeholder-gray-800 focus:outline-none":"w-full mb-4 px-4 py-3 rounded-lg border  placeholder-gray-800 focus:outline-none"}
           />
           {errors.message && <p className="text-sm text-red-400 mb-2">{errors.message}</p>}
 
@@ -104,7 +104,7 @@ function Contact({theme}) {
 
             <div className="flex gap-6 mb-8">
               {/* LinkedIn */}
-              <a href="#linkedin" aria-label="LinkedIn" className="flex items-center justify-center w-12 h-12 rounded-full bg-amber-50 hover:bg-[#1b3a4a] transition">
+              <a href="#linkedin" aria-label="LinkedIn" className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-300 hover:bg-[#70aac79f] transition">
                 {/* SVG here */}
                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
                         <path
@@ -113,7 +113,7 @@ function Contact({theme}) {
                       </svg>
               </a>
               {/* GitHub */}
-              <a href="#github" aria-label="GitHub" className="flex items-center justify-center w-12 h-12 rounded-full bg-amber-50 hover:bg-[#1b3a4a] transition">
+              <a href="#github" aria-label="GitHub" className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-300 hover:bg-[#70aac79f] transition">
                 {/* SVG here */}
 
                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
@@ -124,7 +124,7 @@ function Contact({theme}) {
                
               </a>
               {/* Email */}
-              <a href="mailto:you@example.com" aria-label="Email" className="flex items-center justify-center w-12 h-12 rounded-full bg-amber-50 hover:bg-[#1b3a4a] transition">
+              <a href="mailto:you@example.com" aria-label="Email" className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-300 hover:bg-[#70aac79f] transition">
                 {/* SVG here */}
   <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
                         <path

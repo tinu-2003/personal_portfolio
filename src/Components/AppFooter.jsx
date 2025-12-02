@@ -10,7 +10,7 @@ function AppFooter({theme}) {
 <a href="#about" className={theme?"hover:text-blue-600 transition text-white":"hover:text-blue-600 transition"}>About</a>
 <a href="#projects" className={theme?"hover:text-blue-600 transition text-white":"hover:text-blue-600 transition"}>Projects</a>
 <a href="#contact" className={theme?"hover:text-blue-600 transition text-white":"hover:text-blue-600 transition"}>Contact</a>
-<a href="#resume" className={theme?"hover:text-blue-600 transition text-white":"hover:text-blue-600 transition"}>Resume</a>
+<a href="/Media/Tinu_Sunny.pdf" className={theme?"hover:text-blue-600 transition text-white":"hover:text-blue-600 transition"} download>Resume</a>
 </nav>
 
 {/* Icons */}

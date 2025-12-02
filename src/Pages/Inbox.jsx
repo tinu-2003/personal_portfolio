@@ -31,7 +31,7 @@ function Inbox() {
                 <TableCell>$2999</TableCell>
                 <TableCell>
                   <a href="#" className="font-medium text-primary-600 hover:underline dark:text-primary-500">
-                    Connect
+                    Replay
                   </a>
                 </TableCell>
               </TableRow>
@@ -43,8 +43,8 @@ function Inbox() {
                 <TableCell>Laptop PC</TableCell>
                 <TableCell>$1999</TableCell>
                 <TableCell>
-                  <a href="#" className="font-medium text-primary-600 hover:underline dark:text-primary-500">
-                    Connect
+               <a href="#" className="font-medium text-primary-600 hover:underline dark:text-primary-500">
+                    Replay
                   </a>
                 </TableCell>
               </TableRow>
@@ -55,7 +55,7 @@ function Inbox() {
                 <TableCell>$99</TableCell>
                 <TableCell>
                   <a href="#" className="font-medium text-primary-600 hover:underline dark:text-primary-500">
-                    Connect
+                    Replay
                   </a>
                 </TableCell>
               </TableRow>
