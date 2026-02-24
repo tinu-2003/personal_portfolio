@@ -5,6 +5,7 @@ import MySkills from '../Components/MySkills'
 import React, { useState } from "react";
 import Contact from '../Components/Contact';
 import AppFooter from '../Components/AppFooter';
+import Particles from '../Components/Particles';
 function Index() {
 
   // use state for theme
@@ -128,7 +129,7 @@ active === "All Projects" ? projects : projects.filter((p) => p.category === act
 // 
   return (
    <> 
-   
+
    {/* Header */}
    <Header setTheme={setTheme} theme={theme}/>
 
@@ -267,6 +268,7 @@ className="px-3 py-1 text-xs bg-white text-blue-900 rounded-full border border-b
 {/* Footer */}
 
 <AppFooter theme={theme}/>
+
 </>
 )
 }

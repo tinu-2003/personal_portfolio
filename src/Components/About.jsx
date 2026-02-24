@@ -1,5 +1,5 @@
 import React from 'react'
-
+import TiltedCard from './TiltedCard'
 function About({theme}) {
   return (
     <>
@@ -9,11 +9,33 @@ function About({theme}) {
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 {/* Left: Image */}
 <div className="flex justify-center lg:justify-start">
-<img
+
+{/* <img
 src="https://img.freepik.com/free-photo/businessman-stands-street-solves-cases_496169-2376.jpg?semt=ais_hybrid&w=740&q=80"
 alt="Profile"
 className="rounded-2xl w-full max-w-md shadow-2xl object-cover"
+/> */}
+
+<TiltedCard
+  imageSrc="https://img.freepik.com/free-photo/businessman-stands-street-solves-cases_496169-2376.jpg?semt=ais_hybrid&w=740&q=80"
+  altText="Babu Namboothiri - GNX Album Cover"
+  captionText="Babu Namboothiri"
+  containerHeight="300px"
+  containerWidth="300px"
+  imageHeight="300px"
+  imageWidth="300px"
+  rotateAmplitude={12}
+  scaleOnHover={1.2}
+  showMobileWarning={false}
+  showTooltip={true}
+  displayOverlayContent={true}
+  overlayContent={
+    <p className="tilted-card-demo-text">
+    Babu Namboothiri
+    </p>
+  }
 />
+  
 </div>
 
 
